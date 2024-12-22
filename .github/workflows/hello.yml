@@ -12,5 +12,10 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: '3.x'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Add any dependencies your script needs, e.g.,:
+          # pip install -r requirements.txt
       - name: Run Python script
-        run: python (hello.py)
+        run: python hello.py  # Corrected to run the file directly, no parentheses needed
